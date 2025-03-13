@@ -7,7 +7,12 @@
 
 /*
 
-gcc -o gfx_demonstrations gfx_demonstrations.c gfx.c -lX11 -lm -O3 -march=native
+gcc -o gfx_demonstrations gfx_demonstrations.c gfx.c -lX11 -lm -O3 -march=native -mtune=native
+
+Or like this, to be more specific:
+gcc -std=gnu11 -o gfx_demonstrations gfx_demonstrations.c gfx.c -lX11 -lm -O3 -march=native -mtune=native \
+-msse3 -mssse3 -fno-exceptions -fomit-frame-pointer -flto -fvisibility=hidden -mfpmath=sse -ffast-math -pipe \
+-s -ffunction-sections -fdata-sections -Wl,--gc-sections -fno-asynchronous-unwind-tables -Wl,--strip-all -DNDEBUG
 
 */
 
