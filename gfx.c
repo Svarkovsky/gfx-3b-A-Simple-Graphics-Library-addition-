@@ -24,14 +24,15 @@
 */
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> // Required for qsort
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <unistd.h>
 #include <string.h>
 #include "gfx.h"
 #include <math.h>
-#include <stdlib.h> // Required for qsort
+
+int usleep(unsigned int __useconds); // Явне оголошення функції usleep()
 
 #ifdef USE_XSHM // Conditional compilation for XSHM
 #include <sys/shm.h>    // Required for XSHM
