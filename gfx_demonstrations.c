@@ -44,7 +44,17 @@ SOFTWARE.
 #include <stdio.h>   // Подключение стандартной библиотеки ввода/вывода
 #include <stdlib.h>  // Подключение стандартной библиотеки общего назначения (для функций, таких как exit, rand и т.д.)
 #include <unistd.h>  // Подключение библиотеки POSIX API (для функций, таких как usleep)
+
+#ifndef usleep
+extern int usleep(unsigned int usec);
+#endif
+
 #include <time.h>    // Подключение библиотеки времени (для функций, связанных со временем, например, srand(time(NULL)))
+
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 #include <math.h>    // Подключение математической библиотеки (для математических функций, таких как sin, cos, M_PI)
 #include <string.h>  // Подключение библиотеки для работы со строками (для функций, таких как strlen, sprintf)
 
