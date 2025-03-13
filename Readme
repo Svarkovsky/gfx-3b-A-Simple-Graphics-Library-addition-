@@ -1,58 +1,72 @@
-# gfx_library
-
-A simple C graphics library designed for educational purposes and creative projects on X11 systems. This library provides a straightforward interface for basic graphics operations, making it easy to draw shapes, text, and perform pixel manipulations in a window. Version 3b expands on the original library with features like alpha blending and double buffering for more advanced visual effects.
-
-## Features
-
-- **Basic Drawing Primitives:**
-    - Points (`gfx_point`)
-    - Lines (`gfx_line`)
-    - Circles and Filled Circles (`gfx_circle`, `gfx_fill_circle`)
-    - Rectangles and Filled Rectangles (`gfx_rectangle`, `gfx_fill_rectangle`)
-    - Ellipses and Filled Ellipses (`gfx_double_buffer_fill_ellipse`)
-    - Polygons and Filled Polygons (`gfx_double_buffer_fill_polygon`)
-- **Text Rendering:**
-    - Draw text strings (`gfx_string`)
-    - Get text width in pixels (`gfx_textwidth`)
-- **Color Control:**
-    - Set drawing color using RGB (`gfx_color`)
-    - Set drawing color with alpha transparency RGBA (`gfx_color_alpha`)
-    - Set clear color (`gfx_clear_color`)
-- **Window Management:**
-    - Open a graphics window (`gfx_open`)
-    - Clear the window (`gfx_clear`)
-    - Set window title (`gfx_set_title`)
-    - Move window (`gfx_move_win_l`, `gfx_move_win_d`, `gfx_move_win_r`, `gfx_move_win_u`)
-    - Get window dimensions (`gfx_xsize`, `gfx_ysize`)
-- **Event Handling:**
-    - Check for event waiting (`gfx_event_waiting`)
-    - Wait for event (key press or mouse button) (`gfx_wait`)
-    - Get event coordinates (`gfx_xpos`, `gfx_ypos`)
-    - Read key presses (`gfx_xreadkeys`, `gfx_m_xreadkeys`)
-- **Pixel Manipulation:**
-    - Get pixel color (`GetPix`)
-- **Double Buffering:**
-    - Initialize double buffering (`gfx_double_buffer_init`)
-    - Swap buffers for smooth animation (`gfx_double_buffer_swap`)
-    - Clear back buffer (`gfx_double_buffer_clear`)
-    - Draw primitives to back buffer with alpha support (`gfx_double_buffer_point`, `gfx_double_buffer_fill_rectangle`, `gfx_double_buffer_fill_circle`, `gfx_double_buffer_fill_ellipse`, `gfx_double_buffer_fill_polygon`)
-    - Cleanup double buffering resources (`gfx_double_buffer_cleanup`)
-- **Alpha Blending Support:** For semi-transparent graphics.
-- **XSHM Support (Optional):** For potentially faster double buffering using X Shared Memory Extension (can be enabled during compilation).
-
-## Authors
-
-- **Douglas Thain:** Original author of the initial versions of the library for educational purposes (CSE 20211).
-- **Ivan Svarkovsky:** Expanded and modernized the library, adding alpha channel and double buffering support, optimizing performance, and refactoring for better compatibility (Versions 3a and 3b).
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Version 3b - Usable with Potential Improvements
-
-This is version 3b of the `gfx_library`. It is functional and can be used for creating graphics applications. However, it is important to note that this version may contain imperfections and areas for improvement.
-
-**Contributions are Welcome!**
-
-If you find bugs, have suggestions for improvements, or want to contribute to the library, pull requests are highly encouraged.  This version was developed with expanded functionality in mind, and real-world usage and feedback are essential for further refinement and bug fixing. Please feel free to contribute to make this library even better!
+<h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="gfx_library_0"></a>gfx_library</h1>
+<p class="has-line-data" data-line-start="2" data-line-end="3">A simple C graphics library designed for educational purposes and creative projects on X11 systems. This library provides a straightforward interface for basic graphics operations, making it easy to draw shapes, text, and perform pixel manipulations in a window. Version 3b expands on the original library with features like alpha blending and double buffering for more advanced visual effects.</p>
+<h2 class="code-line" data-line-start=4 data-line-end=5 ><a id="Features_4"></a>Features</h2>
+<ul>
+<li class="has-line-data" data-line-start="6" data-line-end="13"><strong>Basic Drawing Primitives:</strong>
+<ul>
+<li class="has-line-data" data-line-start="7" data-line-end="8">Points (<code>gfx_point</code>)</li>
+<li class="has-line-data" data-line-start="8" data-line-end="9">Lines (<code>gfx_line</code>)</li>
+<li class="has-line-data" data-line-start="9" data-line-end="10">Circles and Filled Circles (<code>gfx_circle</code>, <code>gfx_fill_circle</code>)</li>
+<li class="has-line-data" data-line-start="10" data-line-end="11">Rectangles and Filled Rectangles (<code>gfx_rectangle</code>, <code>gfx_fill_rectangle</code>)</li>
+<li class="has-line-data" data-line-start="11" data-line-end="12">Ellipses and Filled Ellipses (<code>gfx_double_buffer_fill_ellipse</code>)</li>
+<li class="has-line-data" data-line-start="12" data-line-end="13">Polygons and Filled Polygons (<code>gfx_double_buffer_fill_polygon</code>)</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="13" data-line-end="16"><strong>Text Rendering:</strong>
+<ul>
+<li class="has-line-data" data-line-start="14" data-line-end="15">Draw text strings (<code>gfx_string</code>)</li>
+<li class="has-line-data" data-line-start="15" data-line-end="16">Get text width in pixels (<code>gfx_textwidth</code>)</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="16" data-line-end="20"><strong>Color Control:</strong>
+<ul>
+<li class="has-line-data" data-line-start="17" data-line-end="18">Set drawing color using RGB (<code>gfx_color</code>)</li>
+<li class="has-line-data" data-line-start="18" data-line-end="19">Set drawing color with alpha transparency RGBA (<code>gfx_color_alpha</code>)</li>
+<li class="has-line-data" data-line-start="19" data-line-end="20">Set clear color (<code>gfx_clear_color</code>)</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="20" data-line-end="26"><strong>Window Management:</strong>
+<ul>
+<li class="has-line-data" data-line-start="21" data-line-end="22">Open a graphics window (<code>gfx_open</code>)</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23">Clear the window (<code>gfx_clear</code>)</li>
+<li class="has-line-data" data-line-start="23" data-line-end="24">Set window title (<code>gfx_set_title</code>)</li>
+<li class="has-line-data" data-line-start="24" data-line-end="25">Move window (<code>gfx_move_win_l</code>, <code>gfx_move_win_d</code>, <code>gfx_move_win_r</code>, <code>gfx_move_win_u</code>)</li>
+<li class="has-line-data" data-line-start="25" data-line-end="26">Get window dimensions (<code>gfx_xsize</code>, <code>gfx_ysize</code>)</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="26" data-line-end="31"><strong>Event Handling:</strong>
+<ul>
+<li class="has-line-data" data-line-start="27" data-line-end="28">Check for event waiting (<code>gfx_event_waiting</code>)</li>
+<li class="has-line-data" data-line-start="28" data-line-end="29">Wait for event (key press or mouse button) (<code>gfx_wait</code>)</li>
+<li class="has-line-data" data-line-start="29" data-line-end="30">Get event coordinates (<code>gfx_xpos</code>, <code>gfx_ypos</code>)</li>
+<li class="has-line-data" data-line-start="30" data-line-end="31">Read key presses (<code>gfx_xreadkeys</code>, <code>gfx_m_xreadkeys</code>)</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="31" data-line-end="33"><strong>Pixel Manipulation:</strong>
+<ul>
+<li class="has-line-data" data-line-start="32" data-line-end="33">Get pixel color (<code>GetPix</code>)</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="33" data-line-end="39"><strong>Double Buffering:</strong>
+<ul>
+<li class="has-line-data" data-line-start="34" data-line-end="35">Initialize double buffering (<code>gfx_double_buffer_init</code>)</li>
+<li class="has-line-data" data-line-start="35" data-line-end="36">Swap buffers for smooth animation (<code>gfx_double_buffer_swap</code>)</li>
+<li class="has-line-data" data-line-start="36" data-line-end="37">Clear back buffer (<code>gfx_double_buffer_clear</code>)</li>
+<li class="has-line-data" data-line-start="37" data-line-end="38">Draw primitives to back buffer with alpha support (<code>gfx_double_buffer_point</code>, <code>gfx_double_buffer_fill_rectangle</code>, <code>gfx_double_buffer_fill_circle</code>, <code>gfx_double_buffer_fill_ellipse</code>, <code>gfx_double_buffer_fill_polygon</code>)</li>
+<li class="has-line-data" data-line-start="38" data-line-end="39">Cleanup double buffering resources (<code>gfx_double_buffer_cleanup</code>)</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="39" data-line-end="40"><strong>Alpha Blending Support:</strong> For semi-transparent graphics.</li>
+<li class="has-line-data" data-line-start="40" data-line-end="42"><strong>XSHM Support (Optional):</strong> For potentially faster double buffering using X Shared Memory Extension (can be enabled during compilation).</li>
+</ul>
+<h2 class="code-line" data-line-start=42 data-line-end=43 ><a id="Authors_42"></a>Authors</h2>
+<ul>
+<li class="has-line-data" data-line-start="44" data-line-end="45"><strong>Douglas Thain:</strong> Original author of the initial versions of the library for educational purposes (CSE 20211).</li>
+<li class="has-line-data" data-line-start="45" data-line-end="47"><strong>Ivan Svarkovsky:</strong> Expanded and modernized the library, adding alpha channel and double buffering support, optimizing performance, and refactoring for better compatibility (Versions 3a and 3b).</li>
+</ul>
+<h2 class="code-line" data-line-start=47 data-line-end=48 ><a id="License_47"></a>License</h2>
+<p class="has-line-data" data-line-start="49" data-line-end="50">This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
+<h2 class="code-line" data-line-start=51 data-line-end=52 ><a id="Version_3b__Usable_with_Potential_Improvements_51"></a>Version 3b - Usable with Potential Improvements</h2>
+<p class="has-line-data" data-line-start="53" data-line-end="54">This is version 3b of the <code>gfx_library</code>. It is functional and can be used for creating graphics applications. However, it is important to note that this version may contain imperfections and areas for improvement.</p>
+<p class="has-line-data" data-line-start="55" data-line-end="56"><strong>Contributions are Welcome!</strong></p>
+<p class="has-line-data" data-line-start="57" data-line-end="58">If you find bugs, have suggestions for improvements, or want to contribute to the library, pull requests are highly encouraged.  This version was developed with expanded functionality in mind, and real-world usage and feedback are essential for further refinement and bug fixing. Please feel free to contribute to make this library even better!</p>
