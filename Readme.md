@@ -56,3 +56,29 @@ This is version 3b of the `gfx_library`. It is functional and can be used for cr
 **Contributions are Welcome!**
 
 If you find bugs, have suggestions for improvements, or want to contribute to the library, pull requests are highly encouraged.  This version was developed with expanded functionality in mind, and real-world usage and feedback are essential for further refinement and bug fixing. Please feel free to contribute to make this library even better!
+
+---
+
+## Licensing Information for gfx_library (Version 3b)
+
+This graphics library is based on the original `gfx` library created by **Douglas Thain** for the CSE 20211 course at the University of Notre Dame. The original library can be found at: [https://www3.nd.edu/~dthain/courses/cse20211/fall2011/gfx/](https://www3.nd.edu/~dthain/courses/cse20211/fall2011/gfx/).
+
+**License Status of the Original Code:**
+
+The original `gfx` library by Douglas Thain, as found on the linked website, **does not explicitly include a license.**  In the absence of a clear license, standard copyright law applies. This generally means that Douglas Thain retains all rights to the original work.  While the library was made available for educational purposes within the CSE 20211 course, the permissions for broader use and redistribution are not explicitly defined.
+
+**MIT License for Modifications (Versions 3a and 3b):**
+
+Version 3a and Version 3b of this `gfx_library`, which include significant expansions and modernizations such as alpha channel support, double buffering, and performance optimizations, are authored and copyrighted by **Ivan Svarkovsky**.
+
+**These modifications and additions are released under the MIT License.**  This means that you are free to use, modify, and distribute **the changes made in versions 3a and 3b** according to the terms of the MIT License (see the `LICENSE` file for full details).
+
+**Important Considerations:**
+
+* **Unclear License for Original Parts:**  Please be aware that the licensing status of the *original* portions of the `gfx_library` (code written by Douglas Thain in the initial versions) remains **unclear**.  We have not been able to obtain explicit permission to re-license the original code under the MIT License.
+
+* **MIT License Scope:** The MIT License included with this distribution **applies solely to the modifications and additions introduced in versions 3a and 3b by Ivan Svarkovsky.** It does not automatically extend to the original code components.
+
+* **Recommended Use:**  While this library is provided for general use, users should understand the licensing ambiguity concerning the original components.  For educational and non-commercial purposes, using this library is likely acceptable, given its original educational context.  However, for commercial applications or redistribution in contexts beyond personal or educational use, **it is advisable to seek clarification on the license of the original code from Douglas Thain, if possible.**
+
+By using this version of `gfx_library`, you acknowledge and accept these licensing conditions. We encourage contributions and improvements, and we are open to clarifying the licensing situation further to ensure the library can be used as freely and widely as possible within legal and ethical boundaries.
